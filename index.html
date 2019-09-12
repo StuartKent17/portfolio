@@ -10,6 +10,22 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Begin Mailchimp Signup Form -->
+    <link
+      href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica, Arial, sans-serif;
+      }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+
     <style>
       @import url("https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap");
       @import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
@@ -20,6 +36,7 @@
         position: relative;
         width: 100%;
         height: 100%;
+        overflow-x: hidden;
         font-size: 1.05em;
       }
       .background {
@@ -60,6 +77,28 @@
       p {
         line-height: 1.5em;
         text-align: left;
+      }
+
+      #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+
+      #mc_embed_signup * {
+        text-align: center;
+      }
+
+      #mc_embed_signup input.email {
+        margin: 5px auto;
+        text-align: left;
+        max-width: 550px;
+        padding: 5px 10px;
+      }
+
+      #mc_embed_signup input.button {
+        margin: auto;
       }
 
       /**                               
@@ -305,9 +344,10 @@
         max-width: calc(50%);
       }
 
-      .countdown, .countdown p {
+      .countdown,
+      .countdown p {
         text-align: center;
-        margin-bottom:50px;
+        margin-bottom: 50px;
       }
     </style>
   </head>
@@ -552,9 +592,62 @@
       </div>
 
       <div class="countdown">
-        <h3 style="text-align:center;">Releasing</h3>
+        <h3 style="text-align:center;">Planned Release</h3>
         <p id="countdown-timer"></p>
       </div>
+
+      <div id="mc_embed_signup">
+        <form
+          action="https://stuartkent.us5.list-manage.com/subscribe/post?u=b49a9a632787903d01f1e88b3&amp;id=91a6378668"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_blank"
+          novalidate
+        >
+          <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL" style="margin-top:5px;margin-bottom:5px;"
+              >Get Notified When Stuart is out of early access <br /><em
+                style="opacity:.5;font-size:.9em;"
+                >(Back to looking for fulltime work)</em
+              ></label
+            >
+            <input
+              style="margin-top:5px;margin-bottom:5px;"
+              type="email"
+              value=""
+              name="EMAIL"
+              class="email"
+              id="mce-EMAIL"
+              placeholder="email address"
+              required
+            />
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input
+                type="text"
+                name="b_b49a9a632787903d01f1e88b3_91a6378668"
+                tabindex="-1"
+                value=""
+              />
+            </div>
+            <div class="clear" style="margin-top:5px;margin-bottom:5px;">
+              <input
+                style="margin-top:5px;margin-bottom:5px;"
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="button"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--End mc_embed_signup-->
+
       <script>
         // Set the date we're counting down to
         var countDownDate = new Date("Mar 12, 2020").getTime();
@@ -594,14 +687,18 @@
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16838886-3"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-16838886-3"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-16838886-3');
+      gtag("config", "UA-16838886-3");
     </script>
-
   </body>
 </html>
