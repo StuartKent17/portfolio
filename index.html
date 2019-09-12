@@ -3,6 +3,12 @@
   <head>
     <title>Stuart Kent</title>
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
     <style>
       @import url("https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap");
       @import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
@@ -13,6 +19,7 @@
         position: relative;
         width: 100%;
         height: 100%;
+        font-size: 1.05em;
       }
       .background {
         background: linear-gradient(
@@ -38,6 +45,31 @@
         z-index: -1;
       }
 
+      h2,
+      h3,
+      h4,
+      h5,
+      a,
+      li,
+      p {
+        font-family: "Cutive Mono", monospace;
+        text-align: left;
+      }
+
+      p {
+        line-height: 1.5em;
+        text-align: left;
+      }
+
+      /**                               
+         _____        _____             
+        |     |_ _   |  |  |___ ___ ___ 
+        | | | | | |  |     | -_|  _| . |
+        |_|_|_|_  |  |__|__|___|_| |___|
+              |___|                     
+                           
+      **/
+
       .hero {
         text-align: left;
         margin: auto;
@@ -53,8 +85,7 @@
         font-size: 8vw;
       }
 
-      h2 {
-        font-family: "Cutive Mono", monospace;
+      .hero h2 {
         position: relative;
         width: 400px;
         margin-top: 0px;
@@ -62,7 +93,6 @@
       }
 
       a {
-        font-family: "Cutive Mono", monospace;
         background: rgba(255, 255, 255, 0.5);
         display: block;
         max-width: 275px;
@@ -96,15 +126,47 @@
         top: 3px;
       }
 
-      .content {
-        background: white;
-        width: 100%;
+      .bold-claim {
+        display: none;
+      }
+
+      .bold-claim:before {
+        content: "At least on 12/09/19";
+        position: absolute;
+        font-size: 15px;
+        background: rgba(255, 255, 225, 0.8);
+        min-width: 15vw;
+        left: 0;
+        right: 0;
+        max-width: 280px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 50px;
+        color: #814482;
+        transition: opacity 0.4s ease;
+        opacity: 0;
+      }
+
+      .bold-claim.early-access:before {
+        content: "Sorry no backer perks" !important;
+      }
+
+      .bold-claim.minor-leagues {
+        font-size: 1.5em;
+      }
+
+      .bold-claim.minor-leagues:before {
+        content: "Hi Artist / IBM / Microsoft / Australian Stu" !important;
+      }
+
+      .bold-claim:hover:before {
+        opacity: 1;
       }
 
       @media screen and (max-width: 960px) {
         .hero,
         h1,
-        h2 {
+        .hero  h2  {
           width: auto;
           text-align: center;
         }
@@ -112,29 +174,134 @@
           font-size: 12vw;
           line-height: 10vw;
         }
-        h2 {
+        .hero  h2 {
           font-size: 5.5vw;
           margin-top: 30px;
           margin-bottom: 60px;
         }
+
+        .bold-claim:before {
+          margin: auto;
+        }
       }
 
-      h2:before {
-        content: "At least on 27/08/19";
-        position: absolute;
-        font-size: 15px;
-        background: rgba(255, 255, 225, 0.8);
-        min-width: 15vw;
-        text-align: center;
-        margin: auto;
-        padding: 20px;
-        border-radius: 50px;
-        color: #814482;
-        transition: opacity 0.4s ease;
-        opacity: 0;
+      /**
+         _____        _____         _           _   
+        |     |_ _   |     |___ ___| |_ ___ ___| |_ 
+        | | | | | |  |   --| . |   |  _| -_|   |  _|
+        |_|_|_|_  |  |_____|___|_|_|_| |___|_|_|_|  
+              |___|                                                                  
+        
+      **/
+
+      .content {
+        background: white;
+        width: 80%;
+        max-width: 900px;
+        margin: 125px auto 75px auto;
+        padding: 50px;
       }
-      h2:hover:before {
-        opacity: 1;
+
+      .bring-yo-skills-to-work-day a {
+        display: inline;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+      }
+
+      .skills-box {
+        width: 175px;
+        min-height: 150px;
+        padding: 10px 20px;
+        position: relative;
+        z-index: 0;
+        margin: 5px;
+        display: inline-block;
+      }
+
+      @media screen and (max-width: 960px) {
+        .skills-box {
+          width:100%;
+          min-height:0px;
+          text-align:center;
+        }
+      }
+
+      .skills-box:before,
+      .skills-box:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        padding: 2px;
+        z-index: -5;
+      }
+
+      .skills-box:before {
+        background: white;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        top: 2px;
+        z-index: -4;
+      }
+
+      .skills-box:after {
+        background: linear-gradient(
+            217deg,
+            rgba(255, 0, 255, 0.8),
+            rgba(255, 0, 255, 0) 70.71%
+          ),
+          linear-gradient(
+            127deg,
+            rgba(11, 250, 0243, 0.8),
+            rgba(11, 250, 243, 0) 70.71%
+          ),
+          linear-gradient(
+            536deg,
+            rgba(116, 255, 222, 0.8),
+            rgba(116, 255, 222, 0) 70.71%
+          );
+      }
+
+      .neat-stuff {
+        text-align: center;
+      }
+      .neat-stuff a {
+        max-width: 30%;
+        margin: 10px;
+        display: inline-flex;
+      }
+
+      .social-proof {
+        display: flex;
+        align-items: center;
+      }
+
+      .social-proof div {
+        padding: 5px;
+      }
+
+      .social-proof h2 {
+        text-align: left;
+      }
+
+      .social-proof p {
+        font-size: 1.2em;
+        padding: 5px;
+        position: relative;
+      }
+
+      .social-proof img {
+        max-width: calc(50%);
       }
     </style>
   </head>
@@ -143,22 +310,253 @@
 
     <div class="hero">
       <h1>Stuart Kent</h1>
-      <h2>still alive</h2>
+      <div class="claims">
+        <h2 class="bold-claim">still alive</h2>
+        <h2 class="bold-claim early-access">early access</h2>
+        <h2 class="bold-claim minor-leagues">not the more accomplished one</h2>
+      </div>
       <a href="https://github.com/StuartKent17">github</a>
       <a href="https://www.behance.net/stuartkent1">behance</a>
       <a href="mailto:stuart@stuartkent.co.nz">email</a>
     </div>
     <div class="container">
       <div class="content">
-        <!-- Should Really Do Some -->
+        <h2>TLDR</h2>
+        <p>
+          I'm looking for <strong>UI design</strong>,
+          <strong>front end development</strong>,
+          <strong>graphic design</strong>, <strong>web</strong>,
+          <strong>marketing</strong> or <strong>related</strong> roles and
+          projects. I'm currently recovering from some health issues, as such
+          I'm mostly interested in casual and short-term roles but I'm open to
+          discussing how I can help!
+        </p>
+      </div>
+      <div class="content bring-yo-skills-to-work-day">
+        <h4><strong class="">Work Experience</strong></h4>
+
+        <h3>
+          <strong>Bitlab NZ </strong>
+        </h3>
+        <p><em>June 2018 - Ongoing</em></p>
+        <p>
+          Providing design, web support on a contract basis, Bitlab has given me
+          the opportunity to work on varied areas such as web work for private
+          mental health initiatives, and a customer from the broadcasting
+          industry.
+        </p>
+
+        <h3>–</h3>
+        <h3>
+          <strong>Yoobee school of design,&nbsp;short course tutor</strong>
+        </h3>
+        <p><em>January 2018 - June 2018</em></p>
+        <p>
+          This position gave me the opportunity to run a three day introduction
+          to game development in Unity for school aged children; we used
+          Magicavoxel to create simple 3D characters, and did some basic
+          Scripting from a course in the days prior.
+        </p>
+        <p>
+          I also provided one-on-one tutoring, covering Squarespace and
+          Photoshop.
+        </p>
+        <h3>–</h3>
+        <h4><strong>Enatel ltd, front end engineer</strong></h4>
+        <p><em>February 2016 - August 2017</em></p>
+        <p>
+          Joining Enatel was an interesting challenge, taking over a large scale
+          Angular 1.6 project, I worked with the other software developers and
+          members of management to prioritize, design and implement screens for
+          hardware control systems. The unique challenges of working with an
+          embedded device, and with a small company provided a large amount of
+          freedom in choosing how to tackle problems.&nbsp;
+        </p>
+        <p>
+          My most proud achievement would be that of specifying a front end
+          layout language for a C++ controlled LCD. My recommendation that we
+          use a SVG like markup to reduce reinvention of the wheel helped reduce
+          reliance for specification, and allowed quick specification and
+          implementation.
+        </p>
+        <h3>–</h3>
+        <h4><strong>Trimble navigation ltd, multimedia developer</strong></h4>
+        <p><em>January 2013 - February 2016</em></p>
+        <p>
+          Balancing requirements for several projects at a time. I grew my
+          design and development skills for projects in technology from
+          presentations in Adobe Flash, to trade-show applications built in
+          Unity and icons made in software from 3DS Max to Illustrator and
+          Photoshop, to experimental tools I created using front end development
+          tools.
+        </p>
+        <p>
+          I was the main designer and developer for a
+
+          <a
+            target="_blank"
+            href="https://web.archive.org/web/20180128211143/https://play.google.com/store/apps/details?id=com.trimble.licenseviewer&amp;hl=en"
+            >warehousing app</a
+          >
+          and a
+          <a
+            href="https://web.archive.org/web/20180128211143/http://apps.trimbleaccess.com/"
+            >product overview page</a
+          >. I also worked with Colorado based designers to develop a complex
+          <a
+            href="https://web.archive.org/web/20180128211143/https://web.archive.org/web/20150818145342/infogeospatial.trimble.com/ttdm.html"
+            >Time to Do More</a
+          >
+          advertising campaign site. Other projects include an update to
+          document management system, icon design & system exploration and the
+          <a
+            target="_blank"
+            href="https://web.archive.org/web/20180128211143/http://omnistar.com/"
+            >OmniSTAR website</a
+          >.
+        </p>
+        <h3>–</h3>
+        <h2>
+          <strong
+            >University of Canterbury Computer Science faculty, UI/UX Designer
+            Developer</strong
+          >
+        </h2>
+        <p><em>Summer January 2012</em></p>
+        <p>
+          This was a three-quarter time role, providing UI
+          designs,&nbsp;branding, mockups and frontend style guides. The
+          software we were working on, UCanAsk was made for gaining insight and
+          feedback in real time during a lecture. This role was balanced while
+          working full time at Dick Smith, and was an interesting introduction
+          into software development using an agile methodology, built on a
+          Spring Framework Java backend
+        </p>
+      </div>
+
+      <div class="content">
+        <h2>Buzzwords for google</h2>
+        <p>
+          Stuff I've done, or know enough about to pretend I've done for a three
+          minute conversation.
+        </p>
+        <div class="skills">
+          <div class="skills-box">
+            <h4>Design</h4>
+            <ul class="buzzfeed">
+              <li>Web</li>
+              <li>Graphic</li>
+              <li>UI/UX</li>
+              <li>App</li>
+              <li>Advertising</li>
+            </ul>
+          </div>
+          <div class="skills-box">
+            <h4>Development</h4>
+            <ul class="buzzfeed">
+              <li>Apps/Frontends</li>
+              <li>CMS/Javascript tooling</li>
+              <li>XML/XSL</li>
+              <li>GIT</li>
+            </ul>
+          </div>
+          <div class="skills-box">
+            <h4>Dread</h4>
+            <ul class="buzzfeed">
+              <li>Existential</li>
+              <li>Anxietal</li>
+              <li>Did-I-turn-the-oven-offal</li>
+              <li>Ruminant</li>
+            </ul>
+          </div>
+          <div class="skills-box">
+            <h4>Technical Utilities</h4>
+            <ul class="buzzfeed">
+              <li>Linux</li>
+              <li>Windows</li>
+              <li>Virtualisation/containers</li>
+              <li>Minor database management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="content neat-stuff">
+        <h2>Other neat projects</h2>
+        <p>
+          Less professional, maybe notable, 100% unncessary. Presented solely to
+          prove I have no idea what I'm doing.
+        </p>
+        <a href="http://www.rdu.org.nz/?s=games+with+stuart"
+          >Six Episodes of a radio show discussing some games!</a
+        >
+        <a href="<a href=https://globalgamejam.org/2018/games/transemotion"
+          >Code for Global Game Jam - Jan 2018
+        </a>
+        <a
+          href="http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=125318"
+          >Scripting for Ludum Dare 37 — 9/12/2016</a
+        >
+        <a
+          href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=47604"
+          >Art & Code for Ludum Dare 34 — 11/12/2015</a
+        >
+        <a
+          href="http://ludumdare.com/compo/ludum-dare-29/?action=preview&uid=34524"
+          >Art & Code for Ludum Dare 29 — 25/4/14</a
+        >
+      </div>
+
+      <div class="content social-proof">
+        <div>
+          <h2>Social Proof</h2>
+          <p>
+            While I may be a bird, the presence of a biological being lends
+            credence that Stuart is a trustworthy and skilled individual or at
+            least is ok at selecting stock imagery
+          </p>
+          <br /><br />
+          <em style="opacity:.5;">Photographer Credit</em><br />
+          <a
+            style='opacity:.5;background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px'
+            href="https://unsplash.com/@bglisik?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download free do whatever you want high-resolution photos from Bogdan Glisik"
+            ><span style="display:inline-block;padding:2px 3px"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+                viewBox="0 0 32 32"
+              >
+                <title>unsplash-logo</title>
+                <path
+                  d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+                ></path></svg></span
+            ><span style="display:inline-block;padding:2px 3px"
+              >Bogdan Glisik</span
+            ></a
+          >
+        </div>
+        <img
+          class="social-proof-image"
+          src="bogdan-glisik-xPW5M5RuzzQ-unsplash.jpg"
+          alt="An eagle in a forest"
+        />
       </div>
     </div>
+
+    <script>
+      things = $(".bold-claim");
+      $(things[Math.floor(Math.random() * things.length)]).fadeIn(655);
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-16838886-4"
     ></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
