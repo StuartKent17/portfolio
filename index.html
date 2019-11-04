@@ -372,6 +372,25 @@
         text-align: center;
         margin-bottom: 50px;
       }
+
+      .refresh-claim {
+        width:32px;
+        position:absolute;
+        margin-left:-40px; 
+      }
+      .refresh-claim:hover {
+        animation:rotate 1s linear infinite;
+      }
+
+      .refresh-claim:active { 
+        transform:scale(.8);
+      }
+
+      
+      @keyframes rotate {
+           from { transform:rotate(0deg);}
+           to { transform:rotate(360deg);}
+      }
     </style>
   </head>
   <body>
@@ -380,6 +399,7 @@
     <div class="hero">
       <h1>Stuart Kent</h1>
       <div class="claims">
+        <img class="refresh-claim" src="refresh_white_72x72.png" alt="">
         <h2 class="bold-claim">still alive</h2>
         <h2 class="bold-claim early-access">early access</h2>
         <h2 class="bold-claim minor-leagues">not the more accomplished one</h2>
@@ -391,15 +411,17 @@
     </div>
     <div class="container">
       <div class="content">
-        <h2>TLDR</h2>
+        <h2>Hey!</h2>
         <p>
           I'm looking for <strong>UI design</strong>,
           <strong>front end development</strong>,
           <strong>graphic design</strong>, <strong>web</strong>,
           <strong>marketing</strong> or <strong>related</strong> roles and
-          projects. I'm currently recovering from some health issues, as such
-          I'm mostly interested in casual and short-term roles but I'm open to
-          discussing how I can help!
+          projects. I'm interested in casual and short-term roles but I'm always open to
+          discussing to see how I can help!
+        </p>
+        <p>
+          I've been fortunate to have gained a wide range of experiences across different fields. While my primary experience has been in web, UI and marketing. I've also done work in 3D, video, animation, and the Unity game engine.
         </p>
       </div>
       <div class="content bring-yo-skills-to-work-day">
@@ -410,10 +432,10 @@
         </h3>
         <p><em>June 2018 - Ongoing</em></p>
         <p>
-          Providing design, web support on a contract basis, Bitlab has given me
-          the opportunity to work on varied areas such as web work for private
-          mental health initiatives, and a customer from the broadcasting
-          industry.
+          Providing occasional design, web support on a contractual basis, Bitlab has given me
+          the opportunity to work on varied areas such as web work for a private
+          mental health initiative, a customer in the broadcasting
+          industry and assisting with business development.
         </p>
 
         <h3>–</h3>
@@ -432,7 +454,7 @@
           Photoshop.
         </p>
         <h3>–</h3>
-        <h4><strong>Enatel ltd, front end engineer</strong></h4>
+        <h4><strong>Enatel ltd, front end developer</strong></h4>
         <p><em>February 2016 - August 2017</em></p>
         <p>
           Joining Enatel was an interesting challenge, taking over a large scale
@@ -488,8 +510,7 @@
         <h3>–</h3>
         <h2>
           <strong
-            >University of Canterbury Computer Science faculty, UI/UX Designer
-            Developer</strong
+            >University of Canterbury Computer Science faculty, UI/UX Designer</strong
           >
         </h2>
         <p><em>Summer January 2012</em></p>
@@ -502,6 +523,26 @@
           into software development using an agile methodology, built on a
           Spring Framework Java backend
         </p>
+      </div>
+
+      <div class="content bring-yo-skills-to-work-day">
+        <h4><strong class="">Education</strong></h4>
+
+        <h2>
+          <strong
+            >B.Sc. Computer Science <br/>- University Of Canterbury, Christchurch
+            </strong
+          >
+        </h2>
+        <p><em>Graduated December 2012</em></p>
+        <p>
+        Web Design & Development, Human Computer Interaction, Advanced Databases, Networking & Optimisation, Embedded Systems, Computer Graphics, Project Management, Operating Systems,Software Engineering (1 & a half years of project time), Algorithms
+      </p>
+
+      <p>
+        I can program in a variety of languages (JS/C++/Java), design using a variety of tools and methodologies, and have been learning music creation and game creation software such as stagelight, construct 2 and Unity. I have a strong feeling for what makes a good product, and am always looking for ways to help improve the user experience.
+      </p>
+        
       </div>
 
       <div class="content">
@@ -706,8 +747,16 @@
     </div>
 
     <script>
-      things = $(".bold-claim");
-      $(things[Math.floor(Math.random() * things.length)]).fadeIn(655);
+      var things = $(".bold-claim");
+      var lastThing = $(things[Math.floor(Math.random() * things.length)]);
+      lastThing.fadeIn(655);
+      $('.refresh-claim').click(function() {
+        $('.bold-claim').stop();
+        lastThing.fadeOut(150, function() {
+          lastThing = $(things[Math.floor(Math.random() * things.length)]);
+          lastThing.fadeIn(655);  
+        })
+      })
     </script>
   </body>
 </html>
