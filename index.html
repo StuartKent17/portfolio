@@ -41,357 +41,7 @@
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
     </style>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap");
-      @import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
-      html,
-      body {
-        margin: 0px;
-        padding: 0px;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-        font-size: 1.05em;
-      }
-      .background {
-        background: linear-gradient(
-            217deg,
-            rgba(255, 0, 255, 0.8),
-            rgba(255, 0, 255, 0) 70.71%
-          ),
-          linear-gradient(
-            127deg,
-            rgba(11, 250, 0243, 0.8),
-            rgba(11, 250, 243, 0) 70.71%
-          ),
-          linear-gradient(
-            536deg,
-            rgba(116, 255, 222, 0.8),
-            rgba(116, 255, 222, 0) 70.71%
-          );
-        font-family: sans-serif;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0px;
-        z-index: -1;
-      }
-
-      h2,
-      h3,
-      h4,
-      h5,
-      a,
-      li,
-      p {
-        font-family: "Cutive Mono", monospace;
-        text-align: left;
-      }
-
-      p {
-        line-height: 1.5em;
-        text-align: left;
-      }
-
-      #mc_embed_signup {
-        background: #fff;
-        clear: left;
-        font: 14px Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-
-      #mc_embed_signup * {
-        text-align: center;
-      }
-
-      #mc_embed_signup input.email {
-        margin: 5px auto;
-        text-align: left;
-        max-width: 550px;
-        padding: 5px 10px;
-      }
-
-      #mc_embed_signup input.button {
-        margin: auto;
-      }
-
-      /**                               
-         _____        _____             
-        |     |_ _   |  |  |___ ___ ___ 
-        | | | | | |  |     | -_|  _| . |
-        |_|_|_|_  |  |__|__|___|_| |___|
-              |___|                     
-                           
-      **/
-
-      .hero {
-        text-align: left;
-        margin: auto;
-        margin-top: 15vw;
-        width: 10vw;
-        color: white;
-      }
-
-      h1 {
-        font-family: "Rubik Mono One", sans-serif;
-        margin-bottom: 0px;
-        line-height: 8vw;
-        font-size: 8vw;
-      }
-
-      .hero h2 {
-        position: relative;
-        width: 400px;
-        margin-top: 0px;
-        font-size: 2.5vw;
-      }
-
-      a {
-        background: rgba(255, 255, 255, 0.5);
-        display: block;
-        max-width: 275px;
-        padding: 10px 20px;
-        margin: 5px auto;
-        text-decoration: none;
-        transition: background 0.4s ease;
-        color: #43005b;
-        font-weight: bold;
-        text-align: center;
-        min-width: 250px;
-        position: relative;
-        transition: all 0.4s ease;
-        transform: scale(1);
-      }
-      a:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-        position: absolute;
-        z-index: 0;
-      }
-
-      a:hover {
-        background: rgba(255, 255, 255, 0.8);
-        transform: scale(0.97);
-      }
-      a:hover:before {
-        top: 3px;
-      }
-
-      .bold-claim {
-        display: none;
-      }
-
-      .bold-claim:before {
-        content: "At least on 12/09/19";
-        position: absolute;
-        font-size: 15px;
-        background: rgba(255, 255, 225, 0.8);
-        min-width: 15vw;
-        left: 0;
-        right: 0;
-        max-width: 280px;
-        text-align: center;
-        padding: 20px;
-        border-radius: 50px;
-        color: #814482;
-        transition: opacity 0.4s ease;
-        opacity: 0;
-      }
-
-      .bold-claim.early-access:before {
-        content: "Sorry no backer perks" !important;
-      }
-
-      .bold-claim.minor-leagues {
-        font-size: 1.5em;
-      }
-
-      .bold-claim.minor-leagues:before {
-        content: "Hi Artist / IBM / Microsoft / Australian Stu" !important;
-      }
-
-      .bold-claim.trans-rights {
-        font-size: 1.5em;
-      }
-
-      .bold-claim.trans-rights:before {
-        content: "Nuff said" !important;
-      }
-
-      .bold-claim:hover:before {
-        opacity: 1;
-      }
-
-      @media screen and (max-width: 960px) {
-        .hero,
-        h1,
-        .hero h2 {
-          width: auto;
-          text-align: center;
-        }
-        h1 {
-          font-size: 12vw;
-          line-height: 10vw;
-        }
-        .hero h2 {
-          font-size: 5.5vw;
-          margin-top: 30px;
-          margin-bottom: 60px;
-        }
-
-        .bold-claim:before {
-          margin: auto;
-        }
-      }
-
-      /**
-         _____        _____         _           _   
-        |     |_ _   |     |___ ___| |_ ___ ___| |_ 
-        | | | | | |  |   --| . |   |  _| -_|   |  _|
-        |_|_|_|_  |  |_____|___|_|_|_| |___|_|_|_|  
-              |___|                                                                  
-        
-      **/
-
-      .content {
-        background: white;
-        width: 80%;
-        max-width: 900px;
-        margin: 125px auto 75px auto;
-        padding: 50px;
-      }
-
-      .bring-yo-skills-to-work-day a {
-        display: inline;
-        margin: 0px;
-        padding: 0px;
-      }
-
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        justify-content: center;
-      }
-
-      .skills-box {
-        width: 175px;
-        min-height: 150px;
-        padding: 10px 20px;
-        position: relative;
-        z-index: 0;
-        margin: 5px;
-        display: inline-block;
-      }
-
-      @media screen and (max-width: 960px) {
-        .skills-box {
-          width: 100%;
-          min-height: 0px;
-          text-align: center;
-        }
-      }
-
-      .skills-box:before,
-      .skills-box:after {
-        content: "";
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-        padding: 2px;
-        z-index: -5;
-      }
-
-      .skills-box:before {
-        background: white;
-        left: 2px;
-        right: 2px;
-        bottom: 2px;
-        top: 2px;
-        z-index: -4;
-      }
-
-      .skills-box:after {
-        background: linear-gradient(
-            217deg,
-            rgba(255, 0, 255, 0.8),
-            rgba(255, 0, 255, 0) 70.71%
-          ),
-          linear-gradient(
-            127deg,
-            rgba(11, 250, 0243, 0.8),
-            rgba(11, 250, 243, 0) 70.71%
-          ),
-          linear-gradient(
-            536deg,
-            rgba(116, 255, 222, 0.8),
-            rgba(116, 255, 222, 0) 70.71%
-          );
-      }
-
-      .neat-stuff {
-        text-align: center;
-      }
-      .neat-stuff a {
-        max-width: 30%;
-        margin: 10px;
-        display: inline-flex;
-      }
-
-      .social-proof {
-        display: flex;
-        align-items: center;
-      }
-
-      .social-proof div {
-        padding: 5px;
-      }
-
-      .social-proof h2 {
-        text-align: left;
-      }
-
-      .social-proof p {
-        font-size: 1.2em;
-        padding: 5px;
-        position: relative;
-      }
-
-      .social-proof img {
-        max-width: calc(50%);
-      }
-
-      .countdown,
-      .countdown p {
-        text-align: center;
-        margin-bottom: 50px;
-      }
-
-      .refresh-claim {
-        width:32px;
-        position:absolute;
-        margin-left:-40px; 
-      }
-      .refresh-claim:hover {
-        animation:rotate 1s linear infinite;
-      }
-
-      .refresh-claim:active { 
-        transform:scale(.8);
-      }
-
-      
-      @keyframes rotate {
-           from { transform:rotate(0deg);}
-           to { transform:rotate(360deg);}
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="background"></div>
@@ -399,11 +49,13 @@
     <div class="hero">
       <h1>Stuart Kent</h1>
       <div class="claims">
-        <img class="refresh-claim" src="refresh_white_72x72.png" alt="">
+        <img class="refresh-claim" src="refresh_white_72x72.png" alt="" />
         <h2 class="bold-claim">still alive</h2>
         <h2 class="bold-claim early-access">early access</h2>
         <h2 class="bold-claim minor-leagues">not the more accomplished one</h2>
-        <h2 class="bold-claim trans-rights not-really-bold-its-basic-decency">says trans rights</h2>
+        <h2 class="bold-claim trans-rights not-really-bold-its-basic-decency">
+          says trans rights
+        </h2>
       </div>
       <a href="https://github.com/StuartKent17">codes on github</a>
       <a href="https://www.behance.net/stuartkent1">designs on behance</a>
@@ -417,11 +69,14 @@
           <strong>front end development</strong>,
           <strong>graphic design</strong>, <strong>web</strong>,
           <strong>marketing</strong> or <strong>related</strong> roles and
-          projects. I'm interested in casual and short-term roles but I'm always open to
-          discussing to see how I can help!
+          projects. I'm interested in casual and short-term roles but I'm always
+          open to discussing to see how I can help!
         </p>
         <p>
-          I've been fortunate to have gained a wide range of experiences across different fields. While my primary experience has been in web, UI and marketing. I've also done work in 3D, video, animation, and the Unity game engine.
+          I've been fortunate to have gained a wide range of experiences across
+          different fields. While my primary experience has been in web, UI and
+          marketing. I've also done work in 3D, video, animation, and the Unity
+          game engine.
         </p>
       </div>
       <div class="content bring-yo-skills-to-work-day">
@@ -432,10 +87,10 @@
         </h3>
         <p><em>June 2018 - Ongoing</em></p>
         <p>
-          Providing occasional design, web support on a contractual basis, Bitlab has given me
-          the opportunity to work on varied areas such as web work for a private
-          mental health initiative, a customer in the broadcasting
-          industry and assisting with business development.
+          Providing occasional design, web support on a contractual basis,
+          Bitlab has given me the opportunity to work on varied areas such as
+          web work for a private mental health initiative, a customer in the
+          broadcasting industry and assisting with business development.
         </p>
 
         <h3>–</h3>
@@ -510,7 +165,8 @@
         <h3>–</h3>
         <h2>
           <strong
-            >University of Canterbury Computer Science faculty, UI/UX Designer</strong
+            >University of Canterbury Computer Science faculty, UI/UX
+            Designer</strong
           >
         </h2>
         <p><em>Summer January 2012</em></p>
@@ -530,24 +186,30 @@
 
         <h2>
           <strong
-            >B.Sc. Computer Science <br/>- University Of Canterbury, Christchurch
-            </strong
-          >
+            >B.Sc. Computer Science <br />- University Of Canterbury,
+            Christchurch
+          </strong>
         </h2>
         <p><em>Graduated December 2012</em></p>
         <p>
-        Web Design & Development, Human Computer Interaction, Advanced Databases, Networking & Optimisation, Embedded Systems, Computer Graphics, Project Management, Operating Systems,Software Engineering (1 & a half years of project time), Algorithms
-      </p>
+          Web Design & Development, Human Computer Interaction, Advanced
+          Databases, Networking & Optimisation, Embedded Systems, Computer
+          Graphics, Project Management, Operating Systems,Software Engineering
+          (1 & a half years of project time), Algorithms
+        </p>
 
-      <p>
-        I can program in a variety of languages (JS/C++/Java), design using a variety of tools and methodologies, and have been learning music creation and game creation software such as stagelight, construct 2 and Unity. I have a strong feeling for what makes a good product, and am always looking for ways to help improve the user experience.
-      </p>
-        
+        <p>
+          I can program in a variety of languages (JS/C++/Java), design using a
+          variety of tools and methodologies, and have been learning music
+          creation and game creation software such as stagelight, construct 2
+          and Unity. I have a strong feeling for what makes a good product, and
+          am always looking for ways to help improve the user experience.
+        </p>
       </div>
 
       <div class="content">
         <h2>Buzzwords for google</h2>
-	      
+
         <div class="skills">
           <div class="skills-box">
             <h4>Design</h4>
@@ -568,7 +230,7 @@
               <li>GIT</li>
             </ul>
           </div>
-		<!--
+          <!--
           <div class="skills-box">
             <h4>Dread</h4>
             <ul class="buzzfeed">
@@ -592,26 +254,120 @@
       </div>
 
       <div class="content neat-stuff">
-        <h2>Other neat projects</h2>
-	      
-        <a href="http://www.rdu.org.nz/?s=games+with+stuart"
-          >Six Episodes of a radio show discussing some games!</a
-        >
-        <a href="<a href=https://globalgamejam.org/2018/games/transemotion"
-          >Code for Global Game Jam - Jan 2018
-        </a>
-        <a
-          href="http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=125318"
-          >Scripting for Ludum Dare 37 — 9/12/2016</a
-        >
-        <a
-          href="http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=47604"
-          >Art & Code for Ludum Dare 34 — 11/12/2015</a
-        >
-        <a
-          href="http://ludumdare.com/compo/ludum-dare-29/?action=preview&uid=34524"
-          >Art & Code for Ludum Dare 29 — 25/4/14</a
-        >
+        <h2>RDU Games With Stuart Segment (2018)</h2>
+        <p></p>
+        <h4>
+          Games with Stuart – 18 September 2018
+        </h4>
+        <p>
+          The games segment is BACK! This week, Matt doesn’t get Fortnite so
+          Stuart does his best to unpack the appeal.
+          <audio controls>
+            <source src="Radio/RDU_GAMESSTUART_180918.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+
+        <h4>
+          Games with Stuart – 9 July 2018
+        </h4>
+        <p>
+          This week, Matt and Stuart discuss the zombie slaying/dancing game,
+          Crypt of the NecroDancer.
+          <audio controls>
+            <source src="Radio/RDU_GAMESSTUART_090718.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+
+        <h4>
+          Games with Stuart – 2 July 2018
+        </h4>
+        <p>
+          This week, Matt and Stuart talk about the original Crash Bandicoot
+          series in light of the remastered N-Sane Trilogy just being released
+          to Xbox, PC and Nintendo Switch.
+          <audio controls>
+            <source src="Radio/RDU_GAMESSTUART_020718.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+        <p></p>
+        <h4>
+          Games with Stuart – 25 June 2018
+        </h4>
+        <p>
+          This week Matt and Stuart discuss shooting monsters as well as cutting
+          them up with chainsaws. It’s the Doom franchise baby!
+          <audio controls>
+            <source src="Radio/RDU_GAMESSTUART_250618.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+
+        <p></p>
+        <h4>
+          Games with Stuart – 18 June 2018
+        </h4>
+        <p>
+          This week, Stuart and Matt discuss the modern classic and best selling
+          PS2 game of all time, Grand Theft Auto: San Andreas
+          <audio controls>
+            <source src="Radio/RDU_GAMESSTUART_180618.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+
+        <p></p>
+        <h4>
+          Games with Stuart – 11 June 2018
+        </h4>
+        <p>
+          In our brand new video game segment, Matt and Stuart look at the open
+          world racing/crashing game “Burnout Paradise” in light of its recent
+          remaster.
+          <audio controls>
+            <source src="Radio/RDU_GAMESSTUART_110618.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </p> 
+      </div>
+
+      <div class="content neat-stuff"> 
+ 
+        <h2>Game Dev</h2>
+        <div>
+          <a
+            href="https://globalgamejam.org/2018/games/transemotion"
+            class="transemotion"
+            ><div class="image"></div>
+            <span>              <h3>
+              Transemotion
+            </h3>UI Dev | Global Game Jam | 2018</span>
+          </a>
+          <a href="https://www.stuartkent.co.nz/elementalm/" class="elemental"
+            ><div class="image"></div>
+            <span>
+              <h3>
+                Elemental Master
+              </h3>Scripting & Sound | Ludum Dare 37 | 2016
+            </span></a
+          >
+          <a href="https://www.stuartkent.co.nz/tumornator" class="tumor"
+            ><div class="image"></div>
+            <span><h3>
+              Tumornator
+            </h3>Art, Code & Sound | Ludum Dare 34 | 2015</span></a
+          >
+          <a
+            href="http://stuartkent.co.nz/beneath"
+            class="beneath"
+            ><div class="image"></div>
+            <span><h3>
+              Beneath the Surface
+            </h3>Art & Code | Ludum Dare 29 | 2014</span></a
+          >
+        </div>
       </div>
 
       <div class="content social-proof">
@@ -746,13 +502,13 @@
       var things = $(".bold-claim");
       var lastThing = $(things[Math.floor(Math.random() * things.length)]);
       lastThing.fadeIn(655);
-      $('.refresh-claim').click(function() {
-        $('.bold-claim').stop();
+      $(".refresh-claim").click(function() {
+        $(".bold-claim").stop();
         lastThing.fadeOut(150, function() {
           lastThing = $(things[Math.floor(Math.random() * things.length)]);
-          lastThing.fadeIn(655);  
-        })
-      })
+          lastThing.fadeIn(655);
+        });
+      });
     </script>
   </body>
 </html>
