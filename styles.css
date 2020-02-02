@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 html,
 body {
   margin: 0px;
@@ -28,8 +29,8 @@ body {
     );
   font-family: sans-serif;
   width: 100%;
-  height: 100%;
-  position: fixed;
+  height: 100vh;
+  position: absolute;
   top: 0px;
   z-index: -1;
 }
@@ -39,10 +40,18 @@ h3,
 h4,
 h5,
 a,
-li,
-p {
+pre {
   font-family: "Cutive Mono", monospace;
   text-align: left;
+}
+p,
+li {
+  font-family: lato;
+}
+
+h2 {
+  text-align:center;
+  font-size:68px;
 }
 
 p {
@@ -83,30 +92,33 @@ p {
 
 .hero {
   text-align: left;
-  margin: auto;
-  margin-top: 15vw;
-  width: 10vw;
+  margin: 250px 175px 125px auto;
+  width: 60%;
+  max-width: 1135px;
+  height: 17vw;
   color: white;
+}
+
+.hero .classy {
+  position: absolute;
+  margin-top: -4vw;
+  margin-left: -3vw;
+  line-height: 1.4em;
+  font-size: 2.5vw;
 }
 
 h1 {
   font-family: "Rubik Mono One", sans-serif;
   margin-bottom: 0px;
-  line-height: 8vw;
-  font-size: 8vw;
-}
-
-.hero h2 {
-  position: relative;
-  width: 400px;
-  margin-top: 0px;
-  font-size: 2.5vw;
+  line-height: 7vw;
+  font-size: 7vw;
+  font-weight: normal;
 }
 
 .new:before {
   content: "new";
   background: rgb(255, 10, 181);
-  border-radius: 0px 0px 4px 0px;
+  border-radius: 4px;
   color: white;
   display: inline-block;
   width: 35px;
@@ -117,25 +129,25 @@ h1 {
 
 a {
   background: rgba(255, 255, 255, 0.5);
-  display: block;
-  max-width: 275px;
-  padding: 10px 20px;
-  margin: 5px auto;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 5px 60px;
   text-decoration: none;
   transition: background 0.4s ease;
   color: #43005b;
   font-weight: bold;
   text-align: center;
-  min-width: 250px;
   position: relative;
   transition: all 0.4s ease;
   transform: scale(1);
 }
+
 a:before {
   content: "";
-  width: 100%;
+  width:99%;
   height: 100%;
   left: 0px;
+  right:0px;
   top: 0px;
   position: absolute;
   z-index: 0;
@@ -149,71 +161,25 @@ a:hover:before {
   top: 3px;
 }
 
-.bold-claim {
-  display: none;
+.links {
+  display: flex;
 }
 
-.bold-claim:before {
-  content: "At least on 12/09/19";
-  position: absolute;
-  font-size: 15px;
-  background: rgba(255, 255, 225, 0.8);
-  min-width: 15vw;
-  left: 0;
-  right: 0;
-  max-width: 280px;
-  text-align: center;
-  padding: 20px;
-  border-radius: 50px;
-  color: #814482;
-  transition: opacity 0.4s ease;
-  opacity: 0;
+.links a {
+  flex-grow: 1;
+  margin: 2px;
 }
 
-.bold-claim.early-access:before {
-  content: "Sorry no backer perks" !important;
+.links + div {
+  margin-top: 2px;
 }
 
-.bold-claim.minor-leagues {
-  font-size: 1.5em;
-}
-
-.bold-claim.minor-leagues:before {
-  content: "Hi Artist / IBM / Microsoft / Australian Stu" !important;
-}
-
-.bold-claim.trans-rights {
-  font-size: 1.5em;
-}
-
-.bold-claim.trans-rights:before {
-  content: "Nuff said" !important;
-}
-
-.bold-claim:hover:before {
-  opacity: 1;
-}
-
-@media screen and (max-width: 960px) {
-  .hero,
-  h1,
-  .hero h2 {
-    width: auto;
-    text-align: center;
-  }
-  h1 {
-    font-size: 12vw;
-    line-height: 10vw;
-  }
-  .hero h2 {
-    font-size: 5.5vw;
-    margin-top: 30px;
-    margin-bottom: 60px;
-  }
-
-  .bold-claim:before {
-    margin: auto;
-  }
+.links a svg {
+  max-width: 28px !important;
+  vertical-align: middle;
+  margin: 10px;
+  margin-left: -16px;
+  margin-top: 8px;
 }
 
 /**
@@ -225,12 +191,254 @@ a:hover:before {
   
 **/
 
+.container {
+  max-width: 1000px;
+  margin-top: -250px;
+  width: 80%;
+  margin: auto;
+}
+
+.content.intro {
+  padding:50px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row,
+.row div {
+  box-sizing:border-box;
+  padding:25px;
+}
+
+.col33 {
+  width: 33.333%;
+}
+
+.col50 {
+  width: 50%;
+}
+
+.col25 {
+  width: 25%;
+}
+
+.col66 {
+  width: 66.666%;
+} 
+.history {
+  padding:0px 25px;
+}
+.history h5,
+.history p {
+  margin-bottom:0px;
+}
+
+.history p {
+  font-size:.8em;
+  opacity:.5;
+  margin:0px;
+}
+
+
+a.inline {
+  display: inline;
+  font-family: "lato", sans-serif;
+  font-weight: 100;
+  padding: 0px;
+  position: relative;
+  color: rgba(125, 18, 158, 0.3);
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 255, 0.8),
+      rgba(255, 0, 255, 0) 70.71%
+    ),
+    linear-gradient(
+      127deg,
+      rgba(11, 250, 0243, 0.8),
+      rgba(11, 250, 243, 0) 70.71%
+    ),
+    linear-gradient(
+      536deg,
+      rgba(116, 255, 222, 0.8),
+      rgba(116, 255, 222, 0) 70.71%
+    );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+a.inline:before {
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 255, 0.8),
+      rgba(255, 0, 255, 0) 70.71%
+    ),
+    linear-gradient(
+      127deg,
+      rgba(11, 250, 0243, 0.8),
+      rgba(11, 250, 243, 0) 70.71%
+    ),
+    linear-gradient(
+      536deg,
+      rgba(116, 255, 222, 0.8),
+      rgba(116, 255, 222, 0) 70.71%
+    );
+  position: absolute;
+  height: 2px;
+  margin-top: 19px;
+}
+a.inline:hover {
+  transform: scale(1);
+}
+
 .content {
   background: white;
-  width: 80%;
   max-width: 900px;
   margin: 125px auto 75px auto;
-  padding: 50px;
+  padding: 50px 0px;
+}
+
+.examples {
+  padding:0px;
+}
+
+.examples .example {
+  display: flex;
+  flex-direction: column;
+  margin-top: 110px;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px;
+  background: linear-gradient(
+      360deg,
+      rgba(255, 0, 255, 0.68),
+      rgba(255, 0, 255, 0) 70.71%
+    ),
+    linear-gradient(
+      127deg,
+      rgba(11, 250, 0243, 0.68),
+      rgba(11, 250, 243, 0) 70.71%
+    ),
+    linear-gradient(
+      536deg,
+      rgba(116, 255, 222, 0.68),
+      rgba(116, 255, 222, 0) 70.71%
+    );
+}
+.examples .example * {
+  transition: all .4s ease;
+}
+.examples .example:hover {
+  background:white;
+}
+.examples .example:hover h3 { 
+  opacity:0;
+}
+.examples a.example:hover .image{
+  mix-blend-mode: normal;
+}
+.examples p {
+  max-width:700px;
+  text-align:center;
+  line-height:2em;
+  letter-spacing:.25em;
+  margin:50px auto 25px auto;
+}
+.examples p.faded {
+  opacity:.5;
+  margin-top:75px;
+}
+
+.examples .example .image {
+  width: 50%;
+  left: 0px;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: 50%;
+  z-index: -1;
+  mix-blend-mode: soft-light;
+}
+
+.examples .example .image:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  content: "";
+  left: 0;
+}
+
+.examples .example .image + .image {
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  border:1px solid white
+}
+
+.fix-spacing {
+  width: 0px;
+}
+
+.examples h3 {
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.68);
+  font-weight: normal;
+  font-size: 66px;
+  color: white;
+  font-family: "Rubik Mono One", sans-serif;
+  white-space: normal;
+  text-align: center;
+  line-height: 54px;
+  padding: 0px;
+  margin: auto;
+  margin-bottom: -28px;
+  align-self: flex-end;
+  max-width: 800px;
+}
+.trimble h3 {
+  font-size:62px;
+}
+
+
+a.example.single .image {
+  width:100%;
+}
+a.example.single .image + .image {
+  background-image:none;
+  border-left:0px  
+}
+
+
+.impact .image {
+  background-image: url("images/impwebsite.jpg");
+}
+.impact .image + .image {
+  background-image: url("images/impcar.jpg");
+}
+
+a.example.glassman.single .image {
+  background-image: url("images/glassmancard.png");
+  width:100%;
+}
+a.example.single.glassman .image + .image {
+  background-image:none;
+  border-left:0px  
+}
+
+.novity .image {
+  background-image: url("images/novitywebsite.jpg");
+}
+.novity .image + .image {
+  background-image: url("images/novitycard.jpg");
+}
+
+.trimble .image {
+  background-image: url("images/trmbapp.png");
+}
+.trimble .image + .image {
+  background-image: url("images/trmbapp.jpg");
 }
 
 .bring-yo-skills-to-work-day a {
@@ -256,13 +464,6 @@ a:hover:before {
   display: inline-block;
 }
 
-@media screen and (max-width: 960px) {
-  .skills-box {
-    width: 100%;
-    min-height: 0px;
-    text-align: center;
-  }
-}
 
 .skills-box:before,
 .skills-box:after {
@@ -433,7 +634,7 @@ audio {
 .refresh-claim:active {
   transform: scale(0.8);
 }
-
+ 
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -442,3 +643,62 @@ audio {
     transform: rotate(360deg);
   }
 }
+
+
+
+@media screen and (max-width: 1060px) {
+  .hero,
+  h1 {
+    font-size: 9vw;
+    line-height: 10vw;
+    margin:200px auto;
+  }
+  h2 {
+    font-size:24px
+  }
+  .hero .classy { 
+    font-size:3.3vw;
+  }
+  .links  {
+    flex-direction: column;
+    flex-wrap:wrap;
+  }
+
+  a.example h3 {
+    font-size:8.5vw;
+    line-height:8.5vw;
+    margin-top:-50px;
+  }
+  
+  .row,
+  .row > div {
+    display:block;
+    width:100%;
+  }
+
+  .skills-box {
+    width: 100%;
+    min-height: 0px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .hero,
+  h1 {
+    font-size: 12vw;
+    line-height: 12vw;
+    margin:200px auto;
+  }
+  .row,
+  .row > div {
+    padding:0px;
+  }
+  .hero .classy { 
+    font-size:4.5vw;
+    margin-top: -5vw;
+    margin-left: -5vw;
+  }
+
+
+} 
