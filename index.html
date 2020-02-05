@@ -57,48 +57,95 @@ O P M E N T
       </pre>
       <h1>Stuart Kent</h1>
     </div>
-    
+
     <div class="container">
+      <div class="interactive">
+
+        <div class="start hidden"><img src="images/start.png" usemap="#image-map" alt="">
+        <map name="image-map">
+            <area target="" alt="Email" title="Email" href="mailto:stuart@stuartkent.co.nz?subject=hello" coords="186,159,12,117" shape="rect">
+            <area target="" alt="Shutdown" title="Shutdown" onclick="shutdown()" coords="247,439,374,472" shape="rect">
+            <area target="" alt="" title="" href="https://www.google.com" coords="7,72,183,107" shape="rect">
+        </map>
+        </div>
+        <div id="shutdown">
+            <div class="off"></div>
+            <audio src="images/winshutdown.mp3"></audio>
+        </div>
+
+  
+        
+        <div id="startup">
+          <audio src="images/startup.mp3"></audio>
+      </div>
+        <form id="terminal" class="hidden">
+          <div class="output">
+            <pre></pre>
+            <button>x</button>
+          </div>
+          <div class="controls">
+            <label for="extracredit">></label>
+            <input id="extracredit" type="text" />
+            <button id="doterminal">Submit</button>
+          </div>
+        </form>
+      </div>
       <div class="links">
         <a href="https://github.com/StuartKent17"
-          ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          ><svg
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <title>GitHub icon</title>
-            <path            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-            /></svg>code projects</a
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            /></svg          >code projects</a
         >
         <a class="new" href="https://www.behance.net/stuartkent1"
-          ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          ><svg            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <title>Behance icon</title>
             <path
               d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.348-1.05.6-1.67.767-.61.165-1.252.254-1.91.254H0V4.51h6.938v-.007zM16.94 16.665c.44.428 1.073.643 1.894.643.59 0 1.1-.148 1.53-.447.424-.29.68-.61.78-.94h2.588c-.403 1.28-1.048 2.2-1.9 2.75-.85.56-1.884.83-3.08.83-.837 0-1.584-.13-2.272-.4-.673-.27-1.24-.65-1.72-1.14-.464-.49-.823-1.08-1.077-1.77-.253-.69-.373-1.45-.373-2.27 0-.803.135-1.54.403-2.23.27-.7.644-1.28 1.12-1.79.495-.51 1.063-.895 1.736-1.194s1.4-.433 2.22-.433c.91 0 1.69.164 2.38.523.67.34 1.22.82 1.66 1.4.44.586.75 1.26.94 2.02.19.75.25 1.54.21 2.38h-7.69c0 .84.28 1.632.71 2.065l-.08.03zm-10.24.05c.317 0 .62-.03.906-.093.29-.06.548-.165.763-.3.21-.135.39-.328.52-.583.13-.24.19-.57.19-.96 0-.75-.22-1.29-.64-1.62-.43-.32-.99-.48-1.69-.48H3.24v4.05H6.7v-.03zm13.607-5.65c-.352-.385-.94-.592-1.657-.592-.468 0-.855.074-1.166.238-.302.15-.55.35-.74.59-.19.24-.317.48-.392.75-.075.26-.12.5-.135.71h4.762c-.07-.75-.33-1.3-.68-1.69v.01zM6.52 10.45c.574 0 1.05-.134 1.425-.412.374-.27.554-.72.554-1.338 0-.344-.07-.625-.18-.846-.13-.22-.3-.39-.5-.512-.21-.124-.45-.21-.72-.257-.27-.053-.56-.074-.84-.074H3.23v3.44h3.29zm9.098-4.958h5.968v1.454h-5.968V5.48v.01z"
-            /></svg>design portfolio</a
+            /></svg          >design portfolio</a
         >
         <a href="mailto:stuart@stuartkent.co.nz"
-          ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          ><svg            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <title>Gmail icon</title>
             <path
               d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
-            /></svg>contact</a
+            /></svg          >contact</a
         >
       </div>
       <div class="content intro">
         <div class="row">
           <div class="col50">
-
-
             <p>
-              I'm an experienced designer developer, with a background in 
+              I'm an experienced designer developer, with a background in
               <strong>user interfaces</strong>, <strong>advertising</strong>,
-              <strong>branding</strong> and <strong>print</strong> projects.  
+              <strong>branding</strong> and <strong>print</strong> projects.
             </p>
             <p>
-              My primary experience has been in web, UI and
-              marketing, but also have done work in 3D, video, animation, and the Unity
-              game engine. 
+              My primary experience has been in web, UI and marketing, but also
+              have done work in 3D, video, animation, and the Unity game engine.
             </p>
-            <p>I've helped small businesses, large corporations, and charitable movements focus on what's important.</p>
-            <p><a href="mailto:stuart@stuartkent.co.nz" class="inline">Get in touch</a> and we'll discuss your needs and find the right fit for what's best for your project.</p>
-             
+            <p>
+              I've helped small businesses, large corporations, and charitable
+              movements focus on what's important.
+            </p>
+            <p>
+              <a href="mailto:stuart@stuartkent.co.nz" class="inline"
+                >Get in touch</a
+              >
+              and we'll discuss your needs and find the right fit for what's
+              best for your project.
+            </p>
           </div>
           <div class="col25 history">
             <h4>Work History</h4>
@@ -114,123 +161,171 @@ O P M E N T
           <div class="col25 history">
             <h4>Education</h4>
             <h5>BSc Computer Science</h5>
-            <p>University of Canterbury</p> 
-          </div> 
+            <p>University of Canterbury</p>
+          </div>
         </div>
-        
       </div>
       <div class="content examples">
         <h2>Clients</h2>
         <div>
-          <a href="https://www.behance.net/gallery/84666013/Impact-Fitness"
-            class="impact example" ><div class="image"></div>
+          <a
+            href="https://www.behance.net/gallery/84666013/Impact-Fitness"
+            class="impact example"
+            ><div class="image"></div>
             <div class="image"></div>
-              <h3>
-                Impact Health <span class="fixspacing">&</span> Fitness
-              </h3>
+            <h3>Impact Health <span class="fixspacing">&</span> Fitness</h3>
           </a>
           <p class="faded">2019-2020</p>
           <p>
-            Logo Design ░ Web Design & Development ░ Social Media Graphics ░ Branding and Naming Consultation/Research ░ Online Advertising
-                          </p>
+            Logo Design ░ Web Design & Development ░ Social Media Graphics ░
+            Branding and Naming Consultation/Research ░ Online Advertising
+          </p>
 
-                          <p><a href="https://www.impactfitness.nz" class="inline">https://www.impactfitness.nz</a></p>
-          <a href="https://www.behance.net/gallery/90992235/Novity" class="novity example"
-            ><div class="image"></div><div class="image"></div>
-              <h3>
-                Novity
-              </h3>
-            </a
-          >
+          <p>
+            <a href="https://www.impactfitness.nz" class="inline"
+              >https://www.impactfitness.nz</a
+            >
+          </p>
+          <a
+            href="https://www.behance.net/gallery/90992235/Novity"
+            class="novity example"
+            ><div class="image"></div>
+            <div class="image"></div>
+            <h3>
+              Novity
+            </h3>
+          </a>
           <p class="faded">2020</p>
           <p>
-            Logo Design ░ Business Card Design ░ Web Design & Development ░ Branding and Naming Consultation/Research ░  Fast Turnaround 
-                          </p>
+            Logo Design ░ Business Card Design ░ Web Design & Development ░
+            Branding and Naming Consultation/Research ░ Fast Turnaround
+          </p>
 
-                          <p><a href="https://www.novity.co.nz" class="inline">https://www.novity.co.nz</a></p>
-                          
-          <a href="https://www.behance.net/gallery/87637937/The-Glassman" class="single glassman example"
-            ><div class="image"></div><div class="image"></div>
-              <h3>
-                The Glassman
-              </h3>
-              </a
-          >
+          <p>
+            <a href="https://www.novity.co.nz" class="inline"
+              >https://www.novity.co.nz</a
+            >
+          </p>
+
+          <a
+            href="https://www.behance.net/gallery/87637937/The-Glassman"
+            class="single glassman example"
+            ><div class="image"></div>
+            <div class="image"></div>
+            <h3>
+              The Glassman
+            </h3>
+          </a>
           <p class="faded">2019</p>
           <p>
             Business Card Design ░ Online Advertising
-                          </p> 
-          <a href="https://www.behance.net/gallery/87638979/Trimble-License-Viewer" class="trimble example"
-            ><div class="image"></div><div class="image"></div>
+          </p>
+          <a
+            href="https://www.behance.net/gallery/87638979/Trimble-License-Viewer"
+            class="trimble example"
+            ><div class="image"></div>
+            <div class="image"></div>
             <h3>
-                Trimble License Viewer
-              </h3></a
+              Trimble License Viewer
+            </h3></a
           >
           <p class="faded">2014</p>
           <p>
-            Project Management ░ Native Android App Development ░ UI Design  
-                          </p>
+            Project Management ░ Native Android App Development ░ UI Design
+          </p>
 
-                          <p><a href="https://play.google.com/store/apps/details?id=com.trimble.licenseviewer" class="inline">Google Play Store</a></p>
+          <p>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.trimble.licenseviewer"
+              class="inline"
+              >Google Play Store</a
+            >
+          </p>
         </div>
       </div>
-      
 
       <div class="content neat-stuff examples">
         <h2>Game Development</h2>
-        <div>          <a href="https://globalgamejam.org/2018/games/transemotion" class="single transemotion example"
-          ><div class="image"></div><div class="image"></div>
+        <div>
+          <a
+            href="https://globalgamejam.org/2018/games/transemotion"
+            class="single transemotion example"
+            ><div class="image"></div>
+            <div class="image"></div>
             <h3>
-              Transemotion            </h3>
-            </a
-        >
-        <p class="faded">Global Game Jam 2018</p>
-        <p>
-             Unity Development ░ UI Development  
-                        </p>
+              Transemotion
+            </h3>
+          </a>
+          <p class="faded">Global Game Jam 2018</p>
+          <p>
+            Unity Development ░ UI Development
+          </p>
 
-                        <p><a href="https://globalgamejam.org/2018/games/transemotion" class="inline">Play Prototype</a></p>
-    
-        <a href="https://www.stuartkent.co.nz/elementalm/" class="single elemental example"
-          ><div class="image"></div><div class="image"></div>
+          <p>
+            <a
+              href="https://globalgamejam.org/2018/games/transemotion"
+              class="inline"
+              >Play Prototype</a
+            >
+          </p>
+
+          <a
+            href="https://www.stuartkent.co.nz/elementalm/"
+            class="single elemental example"
+            ><div class="image"></div>
+            <div class="image"></div>
             <h3>
-              Elemental Master            </h3>
-            </a
-        >
-        <p class="faded">Ludum Dare 37 - 2016</p>
-        <p>
-          Scripting & Sound  
-                        </p>
+              Elemental Master
+            </h3>
+          </a>
+          <p class="faded">Ludum Dare 37 - 2016</p>
+          <p>
+            Scripting & Sound
+          </p>
 
-                        <p><a href="https://www.stuartkent.co.nz/elementalm/" class="inline">Play Prototype</a></p>
-    
-        <a href="https://www.stuartkent.co.nz/tumornator" class="single tumor example"
-          ><div class="image"></div><div class="image"></div>
+          <p>
+            <a href="https://www.stuartkent.co.nz/elementalm/" class="inline"
+              >Play Prototype</a
+            >
+          </p>
+
+          <a
+            href="https://www.stuartkent.co.nz/tumornator"
+            class="single tumor example"
+            ><div class="image"></div>
+            <div class="image"></div>
             <h3>
-              Tumornator            </h3>
-            </a
-        >
-        <p class="faded">Ludum Dare 34 - 2015</p>
-        <p>
-          Art, Code & Sound  
-                        </p>
+              Tumornator
+            </h3>
+          </a>
+          <p class="faded">Ludum Dare 34 - 2015</p>
+          <p>
+            Art, Code & Sound
+          </p>
 
-                        <p><a href="https://www.stuartkent.co.nz/tumornator" class="inline">Play Prototype</a></p>
-    
-        <a href="http://stuartkent.co.nz/beneath" class="single beneath example"
-          ><div class="image"></div><div class="image"></div>
+          <p>
+            <a href="https://www.stuartkent.co.nz/tumornator" class="inline"
+              >Play Prototype</a
+            >
+          </p>
+
+          <a
+            href="http://stuartkent.co.nz/beneath"
+            class="single beneath example"
+            ><div class="image"></div>
+            <div class="image"></div>
             <h3>
               Beneath the Surface
             </h3>
-            </a
-        >
-        <p class="faded">Ludum Dare 29 - 2014</p>
-        <p>          Art & Code
-                        </p>
+          </a>
+          <p class="faded">Ludum Dare 29 - 2014</p>
+          <p>Art & Code</p>
 
-                        <p><a href="http://stuartkent.co.nz/beneath" class="inline">Play Prototype</a></p>
-    
-          
+          <p>
+            <a href="http://stuartkent.co.nz/beneath" class="inline"
+              >Play Prototype</a
+            >
+          </p>
         </div>
       </div>
       <div class="content neat-stuff rdu">
@@ -313,9 +408,7 @@ O P M E N T
         </p>
       </div>
 
-
-
-<!--
+      <!--
       <div class="content social-proof">
         <div>
           <h2>Social Proof</h2>
@@ -356,11 +449,104 @@ O P M E N T
     -->
 
       <div class="countdown">
-        <h3 style="text-align:center;">And we're out of beta. We're releasing on time.</h3>
+        <h3 style="text-align:center;">
+          And we're out of beta. We're releasing on time.
+        </h3>
         <p id="countdown-timer"></p>
       </div>
-  
-      <script>
+
+      <script type="text/javascript">
+        function echo(output) {
+          $("#terminal .output").fadeIn();
+          $("#terminal .output pre").html(output);
+        }
+
+        $('#terminal .output button').click(function() {
+            $("#terminal .output").fadeOut();
+          });
+
+        $("#terminal").submit(function(e) {
+          switch ($("input#extracredit").val().toLowerCase()) {
+            case "delete":
+              $("body").remove();
+              break;
+            case "lose":
+              alert("Minor setbacks don't define who you are!");
+              alert("maybe");
+              break;
+            case "win":
+              alert("You win!");
+              break;
+            case "cheatsheet":
+            case "cheats":
+            case "cheat":
+            case "?":
+            case "-?":
+            case "wut":
+            case "/?":
+            case "/h":
+            case "man":
+            case "?":
+            case "-h":
+            case "h":
+            case "help":
+              echo(helpOutput);
+              break;
+            case "tree":
+              echo(treeOutput);
+              break;
+            case "ls":
+            case "sl":
+              echo(trainOutput);
+              break;
+            case "test":
+              echo(testOutput);
+              break;
+            case "hello":              
+                window.location = 'mailto:stuart@stuartkent.co.nz?subject=hello';
+            break;
+            case "shutdown": 
+              shutdown();
+            break;
+            case "start" :
+              $(".start").removeClass("hidden")
+            break;
+            case "startup": 
+              $("#startup").fadeIn()
+              $("#startup audio")[0].play();              
+              $("#startup").delay(1200).fadeOut();
+              window.setTimeout(function(){$('.background').addClass('xp');}, 1000);
+              
+            break;
+            case "rm -rf":
+              setInterval(function() {
+                var elem = $("*");
+                var len = $("*").length;        
+                randomElem = Math.floor(Math.random()*len);
+                elem.eq(randomElem).remove();
+              },400)
+              break;
+            default:
+          }
+
+          $("input#extracredit").val("");
+          e.preventDefault();
+        });
+
+        function shutdown() {
+          
+          $("#shutdown audio")[0].play();
+              $("#shutdown").fadeIn()
+              $("#shutdown .off").delay(1200).fadeIn()
+
+        }
+ 
+        $('#terminal.hidden').click(function(e){
+          $(this).removeClass('hidden');
+          $( this ).unbind( event );
+          $("#terminal input").focus();
+        });
+
         // Set the date we're counting down to
         var countDownDate = new Date("Mar 12, 2020").getTime();
 
@@ -390,7 +576,103 @@ O P M E N T
             document.getElementById("countdown-timer").innerHTML = "EXPIRED";
           }
         }, 1000);
+
+
+        var testOutput =`Array
+            #indexOf()
+                ✓ should return -1 when the value is not present
+
+
+            1 passing (9ms)
+          `;
+
+          var trainOutput = `
+                  (  ) (@@) ( )  (@)  ()    @@    O     @     O     @      O                                                                                                           (@@@)                                                                                                                                                                 (    )                                                                                                                                                                 (@@@@)                                                                                                                                                  
+                (   )
+              ====        ________                ___________
+          _D _|  |_______/        \__I_I_____===__|_________|
+           |(_)---  |   H\________/ |   |        =|___ ___|      _________________
+           /     |  |   H  |  |     |   |         ||_| |_||     _|                \_____A
+          |      |  |   H  |__--------------------| [___] |   =|                        |
+          | ________|___H__/__|_____/[][]~\_______|       |   -|                        |
+          |/ |   |-----------I_____I [][] []  D   |=======|____|________________________|_
+        __/ =| o |=-~~\  /~~\  /~~\  /~~\ ____Y___________|__|__________________________|_
+         |/-=|___|=O=====O=====O=====O   |_____/~\___/          |_D__D__D_|  |_D__D__D_|
+          \_/      \__/  \__/  \__/  \__/      \_/               \_/   \_/    \_/   \_/                                                                                   
+          `;
+ 
+
+        var helpOutput = `
+          
+HELP FILE
+       Does some mission critical work to provide robust paradigms.
+       Some of this documentation was lost in the great corư̷̬̰̟̟͍̪̍̆͋̈́̓͐́͂́͋̈́p̸̛͔͎͎̗̫͍̘̥̲̘̈́͋͗̈́̚ẗ̷̤̫͓̬̟̞ĭ̵̧̫̞̜͇̟̀̃̌͜ŏ̸͈̞͈̩̰̳̘͍̘̤̪̦̰̦̔͑̔̓̽̐̎̈́̆̀̓͛͜͠͠n̸͚͘
+
+
+     test
+              thank you for participating in this aper̵̼̯̂̍̊̌͒́̓͠ţ̸̛̱̠̮̺̃̋́͐̅͆̅̊̾͘͝u̵̹̖͖̳͕̲͖̜̭̦̓̾̎͂̓̈̆̒̋̕͜͠r̴̯̰̱̐͛ë̸͉̟̣̻͍̼̻́͐̇͆̽͗̐͛͗͐̕͝ ̵͉͑͆́̓̆̽̔s̴̡̢͈͇͉͚̳̰̻̟̠̝̠̏̏̀̍̓̑̏̃̎̕ͅc̶̦̝̣̦̮̗͔̖͓̟̦͆̏̋̔͌̎̑͝ͅi̸̛͙̋̑̈́͒͂̃̋̌̒̀͌̔̕͝ͅĕ̶̛̬̻̞̜̤̳͗̒̈́̈́͗̓͗̐͐̕͠͠ṅ̸̢̨̺͙̭͚̘͚̠̞̓́͘ć̵̼̠̑̈́͂̂̾͛͘e̷̡͓̙̺͖͉̣̩̼̪̒͜ ̵̛̣̹̼̈̓̑͐͐́̆̽͝
+
+
+     hello
+              hi
+
+
+     shutdown
+              close yourself off emotionally
+
+
+     startup
+              give lots of money to exhausted college graduates
+
+              
+     start
+              begin
+
+
+     win
+              skinner boxes carefully crafted just for you
+       
+
+     lose
+              Faster Than Light
+
+
+     delete
+              thi
+ 
+
+     tree
+              leaf this place
+
+
+     rm -rf
+              a slow burn pallete cleanser
+
+
+     ls, sl, Ls, lS
+              choo-choose your own adventure
+
+
+     cheatsheet, cheat, cheats, man, ?, -?, /?, ?, -h, /h, h, help, wut
+              displays this help file
+`; 
+
+var treeOutput = `
+                  ,.,
+                        MMMM_    ,..,
+                          "_ "__"MMMMM          ,...,,
+                   ,..., __." --"    ,.,     _-"MMMMMMM
+                  MMMMMM"___ "_._   MMM"_."" _ """"""
+                   """""    "" , \_.   "_. ."
+                          ,., _"__ \__./ ."
+                         MMMMM_"  "_    ./
+                          ''''      (    )
+                   ._______________.-'____"---._.
+                    \                          /
+                     \________________________/
+                     (_)                    (_)`;
+        
       </script>
-    </div> 
+    </div>
   </body>
 </html>
