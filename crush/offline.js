@@ -1,0 +1,33 @@
+﻿{
+	"version": 1583622379,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-3.4.1.min.js",
+		"offlineClient.js",
+		"images/payer-sheet0.png",
+		"images/payer-sheet1.png",
+		"images/payer-sheet2.png",
+		"images/level_floor-sheet0.png",
+		"images/seer-sheet0.png",
+		"images/slice-sheet0.png",
+		"images/crusher-sheet0.png",
+		"images/crusher-sheet1.png",
+		"images/sprite2-sheet0.png",
+		"images/particles.png",
+		"images/eyes-sheet0.png",
+		"images/lefttouch-sheet0.png",
+		"images/slice2-sheet0.png",
+		"images/slice3-sheet0.png",
+		"images/slice4-sheet0.png",
+		"media/speech.m4a",
+		"media/speech.ogg",
+		"media/speechbass.m4a",
+		"media/speechbass.ogg",
+		"media/vas_speech.m4a",
+		"media/vas_speech.ogg",
+		"media/tastyoishi - untitled.ogg",
+		"penumbra.png",
+		"pathfind.js"
+	]
+}
