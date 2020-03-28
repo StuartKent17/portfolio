@@ -1,17 +1,12 @@
 ﻿{
-	"version": 1582279647,
+	"version": 1585439248,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
 		"jquery-3.4.1.min.js",
 		"offlineClient.js",
-		"images/dog_sprite_sheetx-sheet0.png",
-		"images/dog_sprite_sheetx-sheet1.png",
-		"images/dog_sprite_sheetx-sheet2.png",
-		"images/sprite-sheet0.png",
-		"images/sprite2-sheet0.png",
-		"images/sprite3-sheet0.png",
 		"images/slice-sheet0.png",
+		"images/sprite-sheet0.png",
 		"images/slice2-sheet0.png",
 		"images/slice3-sheet0.png",
 		"images/slice4-sheet0.png",
@@ -20,15 +15,17 @@
 		"images/slice7-sheet0.png",
 		"images/slice8-sheet0.png",
 		"images/slice9-sheet0.png",
-		"images/particles2.png",
-		"images/lefttouch-sheet0.png",
+		"images/sprite2-sheet0.png",
+		"images/particles.png",
+		"images/sprite3-sheet0.png",
+		"images/sprite4-sheet0.png",
+		"media/un_noise hit.m4a",
+		"media/un_noise hit.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
 		"icon-128.png",
 		"icon-256.png",
-		"loading-logo.png",
-		"freckleface-regular.ttf",
-		"freckleface.css"
+		"loading-logo.png"
 	]
 }
