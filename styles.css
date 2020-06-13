@@ -842,3 +842,34 @@ audio {
 
 
 } 
+
+@media (orientation: landscape) {
+  body * {
+    color:red;
+  }
+
+}
+@media (orientation: portrait) {
+  body * {
+    color:green;
+    content:env(fold-left);
+  }
+
+}
+
+@media (spanning: single-fold-vertical) {
+  body * {
+    color:purple!important; 
+}
+}
+@media (spanning: none) {
+  body * {
+    color:pink!important;
+  }
+}
+@media (spanning: single-fold-horizontal) {
+  body * {
+    color:blue!important;
+  }
+}
+ 

@@ -18,6 +18,25 @@
 
     <title>Stuart Kent</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script type="module" src="node_modules/spanning-css-polyfill/build/spanning-css-polyfill.js"></script>
+    <script type="module">
+      import { FoldablesFeature } from '/node_modules/spanning-css-polyfill/build/spanning-css-polyfill.js';
+
+const foldablesFeat = new FoldablesFeature;
+
+// Add an event listener.
+foldablesFeat.onchange = () => console.log("change");
+
+  // Add as many event listeners as you want.
+foldablesFeat.addEventListener('change', () => console.log("change"));
+
+// Change a single value; results in one update (one 'change' event firing).
+foldablesFeat.foldSize = 20;
+
+// Change multiple values by assignment; results in one update.
+Object.assign(foldablesFeat, { foldSize: 50, spanning: "single-fold-vertical"});
+ 
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -25,22 +44,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Begin Mailchimp Signup Form -->
-    <link
-      href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style type="text/css">
-      #mc_embed_signup {
-        background: #fff;
-        clear: left;
-        font: 14px Helvetica, Arial, sans-serif;
-      }
-      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
-
+  
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
