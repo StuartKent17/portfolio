@@ -19,16 +19,18 @@
     <title>Stuart Kent</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script type="module" src="node_modules/spanning-css-polyfill/build/spanning-css-polyfill.js"></script>
+    <script type="module" src="node_modules/spanning-css-polyfill/build/spanning-css-polyfill.js"></script>
+    <script type="module" src="node_modules/foldable-device-configurator/build/foldable-device-configurator.js"></script>
     <script type="module">
       import { FoldablesFeature } from '/node_modules/spanning-css-polyfill/build/spanning-css-polyfill.js';
 
 const foldablesFeat = new FoldablesFeature;
 
 // Add an event listener.
-foldablesFeat.onchange = () => console.log("change");
+foldablesFeat.onchange = (value) => console.log("change",value);
 
   // Add as many event listeners as you want.
-foldablesFeat.addEventListener('change', () => console.log("change"));
+foldablesFeat.addEventListener('change', (thevalue) => console.log("change", thevalue));
 
 // Change a single value; results in one update (one 'change' event firing).
 foldablesFeat.foldSize = 20;
@@ -49,6 +51,7 @@ Object.assign(foldablesFeat, { foldSize: 50, spanning: "single-fold-vertical"});
   </head>
   <body>
     <div class="background"></div>
+    <foldable-device-configurator></foldable-device-configurator>
 
     <div class="hero">
       <pre class="classy">

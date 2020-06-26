@@ -858,9 +858,32 @@ audio {
 }
 
 @media (spanning: single-fold-vertical) {
-  body * {
-    color:purple!important; 
+ .hero:after {
+   height:20px;
+   background:red;
+   position: absolute;
+   content:"";
+   left:calc(env(fold-left) + env(fold-width));
+  width:env(fold-left)!important;
+ }
+ .hero, .background {
+   position:fixed;
+ }
+ .hero {
+  left: 0;
+  right: env(fold-width)+env(fold-left);
+  top:0;
+  width:env(fold-width);
 }
+
+ .container {
+  position: absolute;
+  left: calc(env(fold-left) + env(fold-width));
+  right: 0;
+  top:0;
+  width:env(fold-left);
+}
+
 }
 @media (spanning: none) {
   body * {

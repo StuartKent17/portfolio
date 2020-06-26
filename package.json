@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/StuartKent17/portfolio#readme",
   "dependencies": {
-    "spanning-css-polyfill": "^1.0.12"
+    "spanning-css-polyfill": "^1.0.12",
+    "windowsegments-polyfill": "^1.0.1"
+  },
+  "devDependencies": {
+    "foldable-device-configurator": "^1.1.4"
   }
 }
