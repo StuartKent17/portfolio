@@ -4452,6 +4452,11 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => "mad horse",
+		() => "many tubes",
+		() => "scram horse",
+		() => "my friend",
+		() => "sad morepork",
+		() => "mare apology",
 		() => 45,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
